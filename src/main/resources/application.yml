@@ -1,0 +1,12 @@
+            
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: speakingClock
+        uri: http://localhost:8080/
+        predicates:
+        - Path=/getTime/*
+server:
+  port: 8081
+      
